@@ -1,7 +1,7 @@
 # Backroads App
 
 ## Description
-
+This is the basic React Website project from the course "React Tutorial and Projects Course" by John Smilga. The project is a simple website for a travel agency. It uses font awesome for icons.
 
 ## Available Scripts
 
