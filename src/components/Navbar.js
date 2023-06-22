@@ -1,4 +1,6 @@
+import React from "react";
 import logo from "../images/logo.svg";
+import { navLinks, socialLinks } from "../data";
 
 export const Navbar = () => {
   return (
@@ -12,63 +14,29 @@ export const Navbar = () => {
         </div>
         {/* <!-- left this comment on purpose --> */}
         <ul className="nav-links" id="nav-links">
-          <li>
-            <a href="#home" className="nav-link">
-              {" "}
-              home{" "}
-            </a>
-          </li>
-
-          <li>
-            <a href="#about" className="nav-link">
-              {" "}
-              about{" "}
-            </a>
-          </li>
-
-          <li>
-            <a href="#services" className="nav-link">
-              {" "}
-              services{" "}
-            </a>
-          </li>
-
-          <li>
-            <a href="#tours" className="nav-link">
-              {" "}
-              tours
-            </a>
-          </li>
+          {navLinks.map((link) => {
+            const { id, href, text } = link;
+            return (
+              <li key={id}>
+                <a href={href} className="nav-link">
+                  {text}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <ul className="nav-icons">
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              className="nav-icon"
-            >
-              <i className="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              className="nav-icon"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              className="nav-icon"
-            >
-              <i className="fab fa-squarespace"></i>
-            </a>
-          </li>
+          {socialLinks.map((link) => {
+            const { id, href, icon } = link;
+            return (
+              <li key={id}>
+                <a href={href} className="nav-icon" target="_blank" rel="noreferrer">
+                  <i className={icon}></i>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>

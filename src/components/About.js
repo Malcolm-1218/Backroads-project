@@ -1,3 +1,5 @@
+import about from "../images/about.jpeg"
+
 export const About = () => {
   return (
     <section class="section" id="about">
@@ -10,7 +12,7 @@ export const About = () => {
       <div class="section-center about-center">
         <div class="about-img">
           <img
-            src="./images/about.jpeg"
+            src={about}
             class="about-photo"
             alt="awesome beach"
           />
